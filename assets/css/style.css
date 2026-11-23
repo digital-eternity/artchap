@@ -372,6 +372,37 @@ section { padding: 56px 0; }
   font-size: .98rem;
 }
 
+/* Полнополосный финальный CTA */
+.cta-full { padding: 0; }
+
+.cta-full .cta-band {
+  border-radius: 0;
+  padding: 88px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Полупрозрачный силуэт гитары, лежащей на боку,
+   разрезанной вдоль пополам (видна нижняя половина),
+   прижат к футеру (правый нижний край блока) */
+.cta-full .cta-band::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(46%, 520px);
+  aspect-ratio: 640 / 300;
+  background: url("../img/guitar-silhouette.svg") right bottom / contain no-repeat;
+  opacity: .12;
+  clip-path: inset(50% 0 0 0); /* видна только нижняя половина */
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .cta-full .cta-band { padding: 56px 0; }
+  .cta-full .cta-band::before { width: 70%; opacity: .08; }
+}
+
 /* Плавное раскрытие */
 .faq-item[open] summary ~ p {
   animation: faq-open .25s ease;
@@ -469,7 +500,6 @@ section { padding: 56px 0; }
   background: var(--text);
   color: #c9cbd9;
   padding: 40px 0 28px;
-  margin-top: 32px;
   font-size: .92rem;
 }
 
