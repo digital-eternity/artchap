@@ -1,0 +1,50 @@
+/* Палитра, вытянутая из фото ансамбля (img/design.jpg):
+   индиго #172E88, глубокий синий #030566, фиолет #381A55 / #592E67,
+   лиловый #71426E, сирень #815475, светло-сиреневый #777791.
+   Подключается после style.css и переопределяет акцентные роли.
+   Основной оранжевый бренда (#D95A2B) сохраняется для CTA. */
+
+:root {
+  --accent: #172E88;        /* индиго вместо темно-синего */
+  --photo-violet: #381A55;
+  --photo-purple: #592E67;
+  --photo-lilac: #71426E;
+  --photo-lavender: #815475;
+  --photo-tint: #F4F2F8;    /* сиреневый оттенок для фонов секций */
+  --photo-line: rgba(88, 46, 103, .18);
+}
+
+/* Ссылки и hover-акценты — фиолет */
+a { color: var(--accent); }
+.main-nav a:hover { color: var(--primary); background: rgba(89, 46, 103, .08); }
+.card-link { color: var(--photo-lilac) !important; }
+
+/* Чередование фонов секций — с лёгкой сиреневой ноткой */
+.alt { background: var(--photo-tint); }
+.alt .card, .card.flat { border-color: var(--photo-line); }
+
+/* Ценовые акценты — лиловый */
+.price-list strong { color: var(--photo-lilac); }
+.awards .year { color: var(--photo-lavender); }
+
+/* Плашки-якоря и заглушки — фиолетовая гамма */
+.anchor-nav a:hover { border-color: var(--photo-lilac); color: var(--photo-lilac); }
+.placeholder-note {
+  background: rgba(113, 66, 110, .08);
+  border-color: rgba(113, 66, 110, .4);
+  color: #5d3a59;
+}
+
+/* Превью видео: градиент сцены — синий прожектор → фиолет */
+.video-thumb { background: linear-gradient(135deg, #172E88 0%, #381A55 55%, #592E67 100%); }
+
+/* CTA-блок: глубокий сценический градиент вместо плоского синего */
+.cta-band {
+  background: linear-gradient(120deg, #030566 0%, #172E88 45%, #592E67 100%);
+}
+
+/* Футер — почти чёрный с фиолетовым подтоном как затемнённая сцена */
+.site-footer { background: #1b1030; }
+
+/* Кнопка-контур на тёмных градиентах */
+.cta-band .btn-outline:hover { color: var(--photo-purple); }

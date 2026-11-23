@@ -1,0 +1,80 @@
+/* Вариант 4 — «дуотон»: фото перекрашено в цвета бренда
+   (assets/img/hero-duotone.webp), слегка темнится слева.
+   Текст по центру-left, без плашки — фон сам по себе спокойный.
+   Подключается после style.css. */
+
+.hero {
+  display: block;
+  background:
+    linear-gradient(90deg,
+      rgba(29, 53, 87, .72) 0%,
+      rgba(29, 53, 87, .35) 55%,
+      rgba(36, 64, 107, .15) 100%),
+    url("../img/hero-duotone.webp") 63% 20% / cover no-repeat,
+    linear-gradient(135deg, #1D3557 0%, #24406b 100%);
+  color: #fff;
+  padding: 88px 0;
+  border-radius: 0;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-grid > div:first-child {
+  max-width: 580px;
+  text-align: left;
+}
+
+.hero h1 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .25);
+}
+
+.hero h1 em { color: #F5A57E; }
+
+.hero .lead {
+  color: #fff;
+  opacity: .95;
+  font-size: 1.125rem;
+  margin-bottom: 28px;
+  max-width: 46ch;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .25);
+}
+
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: .75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  width: auto;
+  margin: 0;
+}
+
+.hero .btn + .btn { margin: 0; }
+
+.hero .btn-outline {
+  border-color: rgba(255, 255, 255, .7);
+  color: #fff;
+}
+.hero .btn-outline:hover {
+  background: rgba(255, 255, 255, .14);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Фото слоем не нужно — оно в фоне */
+.hero-photo { display: none; }
+
+@media (max-width: 480px) {
+  .hero { padding: 48px 0; }
+  .hero .btn { display: flex; width: 100%; }
+  .hero .btn + .btn { margin: 12px 0 0; }
+}

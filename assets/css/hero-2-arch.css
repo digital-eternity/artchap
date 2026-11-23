@@ -1,0 +1,101 @@
+/* Вариант 2 — «арка»: фото справа в форме арки с рамкой,
+   текст слева на плотном фоне. Подключается после style.css. */
+
+.hero {
+  display: block;
+  background: linear-gradient(135deg, #1D3557 0%, #24406b 100%);
+  color: #fff;
+  padding: 72px 0;
+  border-radius: 0;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero-grid > div:first-child {
+  flex: 1 1 55%;
+  max-width: 560px;
+  text-align: left;
+}
+
+.hero h1 {
+  color: #fff;
+  margin-bottom: 14px;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.hero h1 em { color: #F5A57E; }
+
+.hero .lead {
+  color: #fff;
+  opacity: .92;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  max-width: 44ch;
+}
+
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: .75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  width: auto;
+  margin: 0;
+}
+
+.hero .btn + .btn { margin: 0; }
+
+.hero .btn-outline {
+  border-color: rgba(255, 255, 255, .7);
+  color: #fff;
+}
+.hero .btn-outline:hover {
+  background: rgba(255, 255, 255, .14);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Арка */
+.hero-photo {
+  display: block;
+  position: relative;
+  order: 0;
+  flex: 0 0 auto;
+  width: min(38%, 360px);
+  max-width: none;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px 20px 20px;
+  border: 6px solid rgba(255, 255, 255, .92);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, .35);
+  overflow: hidden;
+}
+
+.hero-photo img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 10%;
+}
+
+@media (max-width: 900px) {
+  .hero { padding: 40px 0; }
+  .hero-grid { flex-direction: column; gap: 32px; }
+  .hero-grid > div:first-child { max-width: none; text-align: center; }
+  .hero .lead { margin-inline: auto; }
+  .hero-photo { width: min(78%, 320px); }
+  .hero .btn-outline { margin-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .hero .btn { display: flex; width: 100%; }
+  .hero .btn + .btn { margin: 12px 0 0; }
+}

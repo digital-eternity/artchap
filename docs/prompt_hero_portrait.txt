@@ -1,0 +1,44 @@
+ПРОМПТ: Hero-портрет преподавателя гитары
+===========================================
+
+ОСНОВНОЙ ПРОМПТ (рус., для нейросетей с поддержкой RU):
+------------------------------------------------------
+Фотография преподавателя гитары, мужчина 30–35 лет,
+дружелюбная лёгкая улыбка, держит акустическую гитару.
+Вертикальный портрет 4:5. Студийная съёмка на тёмно-синем
+фоне (#1D3557) с мягким тёплым оранжевым подсветом
+(#D95A2B) сбоку. Стиль современный, живой, без академической
+строгости — casual одежда, расслабленная поза.
+Мягкий свет, лёгкое боке на заднем плане, высокая детализация.
+
+EN-ВЕРСИЯ (для Midjourney / Stable Diffusion):
+----------------------------------------------
+Portrait photograph of a guitar teacher, man aged 30–35,
+friendly easy smile, holding an acoustic guitar. Vertical
+portrait 4:5. Studio shot on a dark navy blue background
+(#1D3557) with soft warm orange rim light (#D95A2B) from the
+side. Modern, lively style, no academic stiffness — casual
+clothes, relaxed pose. Soft key light, slight bokeh in the
+background, highly detailed, professional photography.
+
+ПАРАМЕТРЫ ДЛЯ MIDJOURNEY:
+------------------------
+--ar 4:5 --style raw --v 6 --s 150
+
+NEGATIVE PROMPT (для Stable Diffusion):
+---------------------------------------
+formal suit, bow tie, strict pose, harsh shadows, blurry face,
+extra fingers, deformed hands, oversaturated, text, watermark
+
+ТРЕБОВАНИЯ К РЕЗУЛЬТАТУ (под наш сайт):
+--------------------------------------
+- Вертикаль, соотношение сторон 4:5 (например 1024×1280)
+- Минимум 1024 px по короткой стороне (лучше 1600×2000)
+- Лицо крупно и в фокусе — фото пойдёт в hero-блок
+- Цвета должны сочетаться с палитрой сайта:
+  тёмно-синий #1D3557 / #172E88 и оранжевый #D95A2B
+- Формат: JPG или PNG (я конвертирую в WebP и нарежу кропы)
+
+КУДА СОХРАНИТЬ:
+--------------
+img/portrait-hero-new.jpg  →  я сделаю WebP + заменю hero-фото
