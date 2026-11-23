@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/photo-palette.css">
   <link rel="stylesheet" href="assets/css/hero-4-duotone.css">
+  <script src="assets/js/gallery.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,17 +113,8 @@
             <li>Фингерстайл, медиаторная техника, импровизация</li>
             <li>Жанры: рок, джаз, фолк, блюз</li>
           </ul>
-        </div>
-        <img src="assets/img/portrait-casual.webp" alt="Артём Чапковский — преподаватель гитары в СПб, портрет" width="853" height="1280" loading="lazy">
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="container split">
-        <img src="assets/img/portrait-formal.webp" alt="Артём Чапковский — лауреат конкурсов, снимок с электрогитарой" width="853" height="1280" loading="lazy">
-        <div>
-          <h2 class="section-title">Награды и опыт</h2>
-          <ul class="awards">
+          <h3 class="awards-title">Награды</h3>
+          <ul class="awards awards-compact">
             <li><span class="year">2022</span> Лауреат Всероссийского конкурса</li>
             <li><span class="year">2021</span> Грант на развитие проектов</li>
             <li><span class="year">2020</span> Лучший педагог года</li>
@@ -130,16 +122,27 @@
             <li><span class="year">2018</span> Лауреат Международного конкурса</li>
           </ul>
         </div>
+        <img src="assets/img/portrait-casual.webp" alt="Артём Чапковский — преподаватель гитары в СПб, портрет" width="853" height="1280" loading="lazy">
       </div>
     </section>
 
-    <section>
-      <div class="container split">
-        <div>
-          <h2 class="section-title">Исполнительская практика</h2>
-          <p>Музыкант, который рассказывает про музыку, должен сам регулярно играть на сцене. Я выступаю с оркестром и в составе разных коллективов — ученики получают живые, «концертные» знания, а не только учебник.</p>
+    <section class="alt" id="praktika">
+      <div class="container">
+        <h2 class="section-title">Исполнительская практика</h2>
+        <p class="section-sub">Музыкант, который рассказывает про музыку, должен сам регулярно играть на сцене. Я выступаю с оркестром и в составе разных коллективов — ученики получают живые, «концертные» знания, а не только учебник.</p>
+        <div class="gallery-strip" id="perf-gallery">
+          <!-- Видео встраиваются с VK: внутрь .gallery-video добавьте
+               <iframe src="https://vk.com/video_ext.php?oid=...&id=...&hash=..." allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+               Либо замените весь div.gallery-video на iframe. -->
+          <div class="gallery-item gallery-video" aria-label="Видео с концерта — скоро">
+            <svg class="play" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="video-label">Видео с концерта — скоро</span>
+          </div>
+          <div class="gallery-item gallery-video" aria-label="Выступление с оркестром — скоро">
+            <svg class="play" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="video-label">Выступление с оркестром — скоро</span>
+          </div>
         </div>
-        <img src="assets/img/orchestra.webp" alt="Артём Чапковский играет на гитаре в оркестре на сцене" width="1280" height="960" loading="lazy">
       </div>
     </section>
 
@@ -254,7 +257,7 @@
     <!-- Ансамбль -->
     <section class="alt" id="ansambl">
       <div class="container split">
-        <img src="assets/img/orchestra.webp" alt="Выступление гитарного ансамбля на сцене в Санкт-Петербурге" width="1280" height="960" loading="lazy">
+        <img src="assets/img/band.webp" alt="Ансамбль Артёма Чапковского — музыканты коллектива после выступления" width="1600" height="1042" loading="lazy">
         <div>
           <h2 class="section-title">Ансамбль</h2>
           <p>Когда гитара перестаёт быть инструментом «для себя». Вместе играем аранжировки в разных жанрах — рок, джаз, фолк, блюз — и выходим на сцену.</p>
@@ -286,7 +289,7 @@
           <br>
           <a class="btn btn-primary" href="https://t.me/artchap" target="_blank" rel="noopener">Оставить заявку</a>
         </div>
-        <img src="assets/img/orchestra.webp" alt="Оркестр гитаристов — концерт в Санкт-Петербурге" width="1280" height="960" loading="lazy">
+        <img src="assets/img/orchestra-group.webp" alt="Оркестр Артёма Чапковского — коллектив на сцене после концерта" width="1280" height="854" loading="lazy">
       </div>
     </section>
 
