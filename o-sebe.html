@@ -15,6 +15,7 @@
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/gallery.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,14 +95,22 @@
       </div>
     </section>
 
-    <section class="alt">
-      <div class="container split">
-        <img src="assets/img/orchestra.webp" alt="Артём Чапковский играет на электрогитаре в оркестре на сцене" width="1280" height="960" loading="lazy">
-        <div>
-          <h2 class="section-title">Исполнительская практика</h2>
-          <p>Музыкант, который рассказывает про музыку, должен сам регулярно играть на сцене. Я выступаю с оркестром и в составе разных коллективов — это держит руку в тонусе, а педагогику — честной и современной.</p>
-          <br>
-          <p>Мой опыт исполнителя напрямую влияет на уроки: ученики получают живые, «концертные» знания, а не только учебник.</p>
+    <section class="alt" id="praktika">
+      <div class="container">
+        <h2 class="section-title">Исполнительская практика</h2>
+        <p class="section-sub">Музыкант, который рассказывает про музыку, должен сам регулярно играть на сцене. Я выступаю с оркестром и в составе разных коллективов — ученики получают живые, «концертные» знания, а не только учебник.</p>
+        <div class="gallery-strip" id="perf-gallery">
+          <!-- Видео встраиваются с VK: внутрь .gallery-video добавьте
+               <iframe src="https://vk.com/video_ext.php?oid=...&id=...&hash=..." allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+               Либо замените весь div.gallery-video на iframe. -->
+          <div class="gallery-item gallery-video" aria-label="Видео с концерта — скоро">
+            <svg class="play" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="video-label">Видео с концерта — скоро</span>
+          </div>
+          <div class="gallery-item gallery-video" aria-label="Выступление с оркестром — скоро">
+            <svg class="play" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span class="video-label">Выступление с оркестром — скоро</span>
+          </div>
         </div>
       </div>
     </section>
