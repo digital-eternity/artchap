@@ -315,6 +315,73 @@ section { padding: 56px 0; }
   border: 0;
 }
 
+/* FAQ — схлопывающийся список (details/summary) */
+.faq-item {
+  background: var(--white);
+  border: 1px solid rgba(43, 45, 66, .1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  position: relative;
+  padding: 20px 56px 20px 24px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+/* Плюс, поворачивающийся в крестик */
+.faq-item summary::before,
+.faq-item summary::after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 16px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: var(--primary);
+  transform: translateY(-50%);
+  transition: transform .2s ease;
+}
+
+.faq-item summary::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.faq-item[open] summary {
+  border-bottom: 1px solid rgba(43, 45, 66, .08);
+  color: var(--primary);
+}
+
+.faq-item p {
+  padding: 18px 24px 22px;
+  margin: 0;
+  color: #4a4d63;
+  font-size: .98rem;
+}
+
+/* Плавное раскрытие */
+.faq-item[open] summary ~ p {
+  animation: faq-open .25s ease;
+}
+
+@keyframes faq-open {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .split img { border-radius: var(--radius); box-shadow: var(--shadow); }
 
 /* Lists */
@@ -385,6 +452,12 @@ section { padding: 56px 0; }
   padding: 20px 24px;
   color: #7a4a35;
   font-size: .95rem;
+}
+
+.price-note {
+  margin-top: 12px;
+  color: #7a4a35;
+  font-size: .85rem;
 }
 
 /* Contacts */
