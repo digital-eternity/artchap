@@ -11,15 +11,16 @@
   <meta property="og:title" content="Ансамбль в СПб — Артём Чапковский">
   <meta property="og:description" content="Играйте в коллективе: репетиции, разные жанры и настоящие выступления. Набор участников открыт.">
   <meta property="og:image" content="https://artchap.ru/assets/img/band.webp">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/manrope-800-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">Артём <span>Чапковский</span></a>
+      <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="" class="logo-img" width="246" height="277">Артём <span>Чапковский</span></a>
       <nav class="main-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -83,12 +84,31 @@
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="cta-band">
+    <section class="cta-full">
+      <div class="cta-band">
+        <span class="cta-note note-1" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+        </span>
+        <span class="cta-note note-2" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+        </span>
+        <span class="cta-note note-3" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+        </span>
+        <div class="container">
           <h2>Хотите играть в ансамбле?</h2>
-          <p>Напишите в Telegram: расскажите о своём опыте и инструменте — я отвечу про расписание и ближайший набор.</p>
-          <a class="btn btn-primary" href="https://t.me/Chapkovsky" target="_blank" rel="noopener">Узнать об участии</a>
+          <p>Напишите о своём опыте и инструменте — отвечу про расписание и ближайший набор.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://t.me/Chapkovsky" target="_blank" rel="noopener">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.6 18.8 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-.9.5l.3-4.6 8.5-7.7c.4-.3-.1-.5-.6-.2L7.2 13.2 2.7 11.7c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.3 1.1z"/></svg>
+              Написать в Telegram
+            </a>
+            <a class="btn btn-outline" href="https://vk.ru/artchap" target="_blank" rel="noopener">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.7 18c-5.3 0-8.3-3.6-8.4-9.8h2.7c.1 4.5 2.1 6.4 3.6 6.8V8.2h2.5v3.9c1.5-.2 3-1.9 3.6-3.9h2.5c-.4 2.4-2.2 4.1-3.5 4.8 1.3.6 3.4 2.3 4.1 5H16c-.6-1.9-2.1-3.4-4.2-3.6V18h.9z"/></svg>
+              VK
+            </a>
+          </div>
+          <p class="cta-trust">Отвечаю лично, обычно в течение дня · Пробное занятие — без обязательств</p>
         </div>
       </div>
     </section>

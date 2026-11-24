@@ -14,9 +14,10 @@
   <meta property="og:description" content="Преподаватель-практик: учу играть на гитаре так, чтобы вы могли играть с другими. Взрослым с нуля, детям, любителям — ансамбль и оркестр.">
   <meta property="og:image" content="https://artchap.ru/assets/img/hero-closeup.webp">
   <meta property="og:locale" content="ru_RU">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/manrope-800-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/photo-palette.css">
   <link rel="stylesheet" href="assets/css/hero-4-duotone.css">
@@ -65,7 +66,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top">Артём <span>Чапковский</span></a>
+      <a class="logo" href="#top"><img src="assets/img/logo.png" alt="" class="logo-img" width="246" height="277">Артём <span>Чапковский</span></a>
       <nav class="main-nav" aria-label="Основная навигация">
         <ul>
           <li><a href="#top" aria-current="page">Главная</a></li>
@@ -145,12 +146,14 @@
         <h2 class="section-title">Исполнительская практика</h2>
         <p class="section-sub">Музыкант, который рассказывает про музыку, должен сам регулярно играть на сцене. Я выступаю как соло-артист и в составе разных коллективов, а ученики получают живые, «концертные» знания — и сами выходят на сцену с моим ансамблем и оркестром.</p>
         <div class="gallery-strip" id="perf-gallery">
+          <div class="gallery-item gallery-video" aria-label="Выступление на концерте — видео VK">
+            <iframe src="https://vk.ru/video_ext.php?oid=-8762382&id=456241298&hash=5b568177ecf631f7" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <!-- Видео встраиваются с VK: внутрь .gallery-video добавьте
                <iframe src="https://vk.com/video_ext.php?oid=...&id=...&hash=..." allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
                Либо замените весь div.gallery-video на iframe. -->
-          <div class="gallery-item gallery-video" aria-label="Видео с концерта — скоро">
-            <svg class="play" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            <span class="video-label">Видео с концерта — скоро</span>
+          <div class="gallery-item gallery-video" aria-label="Выступление на концерте — видео VK">
+            <iframe src="https://vk.ru/video_ext.php?oid=-8762382&id=456241221&hash=491503b28770ed06" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="gallery-item gallery-video" aria-label="Выступление с оркестром — скоро">
             <svg class="play" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>

@@ -14,7 +14,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: 'Golos Text', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
@@ -30,6 +30,12 @@ a { color: var(--accent); }
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Типографика: заголовки и кнопки — Manrope */
+h1, h2, h3,
+.section-title, .logo, .btn, .main-nav a, .price-list strong, .awards .year {
+  font-family: 'Manrope', 'Golos Text', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 /* Header */
@@ -52,10 +58,19 @@ a { color: var(--accent); }
 
 .logo {
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.27rem;
   color: var(--text);
   text-decoration: none;
   letter-spacing: .2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .logo span { color: var(--primary); }
@@ -197,7 +212,7 @@ section { padding: 56px 0; }
 
 /* CTA band */
 .cta-band {
-  background: var(--accent);
+  background: linear-gradient(120deg, #030566 0%, #172E88 45%, #592E67 100%);
   color: #fff;
   border-radius: var(--radius);
   padding: 48px 32px;
@@ -554,6 +569,8 @@ section { padding: 56px 0; }
   .grid-3, .grid-2, .video-grid { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; gap: 28px; }
   .header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .logo { font-size: 1.45rem; }
+  .logo-img { height: 46px; }
   .btn + .btn { margin-left: 0; margin-top: 10px; }
   .btn { display: block; width: 100%; }
   .contact-buttons .btn { width: auto; flex: 1 1 200px; }
