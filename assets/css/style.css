@@ -125,7 +125,10 @@ h1, h2, h3,
 .hero .lead { font-size: 1.1rem; margin-bottom: 28px; max-width: 34em; }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 14px 28px;
   border-radius: 999px;
   font-weight: 700;
@@ -136,6 +139,8 @@ h1, h2, h3,
   border: 2px solid transparent;
   transition: background .15s ease, color .15s ease, border-color .15s ease;
 }
+
+.btn-icon { width: 20px; height: 20px; flex: 0 0 auto; }
 
 .btn-primary { background: var(--primary); color: #fff; }
 .btn-primary:hover { background: var(--primary-dark); }
@@ -332,6 +337,71 @@ section { padding: 56px 0; }
   border: 0;
 }
 
+/* Входной блок «Артём / Ученики» */
+.duo-feature {
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.duo-feature .gallery-item {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.duo-feature .video-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 16px 12px;
+  background: linear-gradient(transparent, rgba(20, 12, 30, .6));
+  color: #fff;
+  font-size: .88rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Группы видео в «Исполнительской практике» */
+.video-group-title {
+  margin: 36px 0 12px;
+  font-size: 1.15rem;
+}
+
+.video-note {
+  margin: 4px 0 0;
+  font-size: .85rem;
+  color: #5c6070;
+}
+
+/* Фильтры-чипы над видео-лентой */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 20px;
+}
+
+.chip {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(43, 45, 66, .2);
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.chip:hover { border-color: var(--primary); color: var(--primary); }
+
+.chip.is-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
 /* FAQ — лёгкий список с разделителями (details/summary) */
 .faq-item {
   background: transparent;
@@ -410,9 +480,8 @@ section { padding: 56px 0; }
 
 /* Кнопки с иконками мессенджеров */
 .cta-band .btn { display: inline-flex; align-items: center; gap: 10px; }
-.cta-band .btn-icon { width: 20px; height: 20px; flex: 0 0 auto; }
-
 .cta-actions { margin-bottom: 18px; }
+.cta-actions .btn { vertical-align: middle; }
 
 /* Строка доверия под кнопками */
 .cta-trust {
@@ -536,6 +605,91 @@ section { padding: 56px 0; }
   margin-top: 12px;
   color: #7a4a35;
   font-size: .85rem;
+}
+
+.contacts-split {
+  align-items: stretch;
+  gap: 32px;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contacts-address {
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.contacts-map {
+  min-height: 340px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(43, 45, 66, .1);
+}
+
+.contacts-map iframe {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  display: block;
+}
+
+.map-open { margin: 12px 4px 0; font-size: .92rem; }
+
+.contacts-micro {
+  font-size: .88rem;
+  color: #6a6e84;
+  margin: -8px 0 0;
+}
+
+.contacts-address {
+  font-size: .95rem;
+  line-height: 1.6;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.pin-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--primary);
+}
+
+/* Плашка-пример первого сообщения */
+.example-message {
+  background: var(--white);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-message p {
+  margin: 0;
+  flex: 1 1 320px;
+  color: #4a4d63;
+  font-size: .98rem;
+}
+
+.example-message .copy-btn { flex: 0 0 auto; width: auto; color: var(--accent); border-color: var(--accent); }
+.example-message .copy-btn:hover { background: var(--accent); color: #fff; }
+.example-message .copy-btn.copied { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.contacts-steps-title {
+  margin: 40px 0 16px;
+  font-size: 1.15rem;
 }
 
 /* Contacts */

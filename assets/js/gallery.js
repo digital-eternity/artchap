@@ -24,3 +24,23 @@
     })
     .catch(function () { /* манифест недоступен — остаются только видео-слоты */ });
 })();
+
+/* Фильтры-чипы видео в «Исполнительской практике» (data-cat на .gallery-item) */
+(function () {
+  var chips = document.querySelectorAll(".filter-chips .chip");
+  var items = document.querySelectorAll("#video-gallery .gallery-item");
+  if (!chips.length || !items.length) return;
+
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var filter = chip.dataset.filter;
+
+      chips.forEach(function (c) { c.classList.toggle("is-active", c === chip); });
+
+      items.forEach(function (item) {
+        var show = filter === "all" || item.dataset.cat === filter;
+        item.style.display = show ? "" : "none";
+      });
+    });
+  });
+})();
