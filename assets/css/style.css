@@ -340,7 +340,7 @@ section { padding: 56px 0; }
 /* Входной блок «Артём / Ученики» */
 .duo-feature {
   gap: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 48px;
 }
 
 .duo-feature .gallery-item {
@@ -359,6 +359,11 @@ section { padding: 56px 0; }
   font-size: .88rem;
   font-weight: 500;
   pointer-events: none;
+}
+
+/* Поднять текст заглушки, чтобы не перекрывался подписью */
+.duo-feature .video-label {
+  bottom: 46px;
 }
 
 /* Группы видео в «Исполнительской практике» */
