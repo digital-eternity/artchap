@@ -62,15 +62,16 @@ h1, h2, h3,
   color: var(--text);
   text-decoration: none;
   letter-spacing: .2px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-block;
 }
 
 .logo-img {
   height: 40px;
   width: auto;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 14px;
+  margin-top: -3px;
 }
 
 .logo span { color: var(--primary); }
